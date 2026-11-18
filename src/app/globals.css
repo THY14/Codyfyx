@@ -1,0 +1,102 @@
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #181D27;
+
+  /* BRAND */
+  --brand-primary: #003AD1;
+  --brand-primary-hover: #002fa8;
+  --brand-primary-soft: #e6ecff;
+  --brand-focus: #7596ff;
+
+  /* TEXT */
+  --text-primary: #181d27;
+  --text-secondary: #414651;
+  --text-muted: #535862;
+  --text-disabled: #717680;
+  --text-soft:#A4A7AE;
+
+  /* BORDER */
+  --border-default: #d5d7da;
+  --border-muted: #E9EAEB;
+
+  /* BACKGROUND */
+  --bg-page: #ffffff;
+  --bg-subtle: #E9EAEB;
+  --bg-muted: #F5F5F5;
+
+  --bg-tool-section: #FAFAFA;
+  
+  /* FEEDBACK */
+  --focus-ring: #f4ebff;  
+  --shadow-soft: 0 1px 2px rgba(10, 13, 18, 0.05);
+}
+
+.dark {
+  --background: #0a0a0a;
+  --foreground: #ffffff;
+  --bg-tool-section: #181D27;
+
+  --brand-primary: #0043F1;
+
+  --text-primary: #FFFFFF;
+  --text-secondary: #A4A7AE;
+  --text-muted: #D5D7DA;
+  --text-disabled: #717680;
+  --text-soft:#535862;
+
+  --border-default: #414651;
+  --border-muted: #414651;
+
+  --bg-muted: #181D27;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--brand-primary);
+  --color-primary-hover: var(--brand-primary-hover);
+  --color-primary-soft: var(--brand-primary-soft);
+  --color-focus: var(--brand-focus);
+
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-muted: var(--text-muted);
+  --color-text-disabled: var(--text-disabled);
+  --color-text-soft:var(--text-soft);
+
+  --color-border-default: var(--border-default);
+  --color-border-muted: var(--border-muted);
+
+  --color-background-page: var(--bg-page);
+  --color-background-subtle: var(--bg-subtle);
+  --color-background-muted: var(--bg-muted);
+
+  --color-background-section: var(--bg-tool-section);
+
+  --color-ring-focus: var(--focus-ring);
+  --shadow-soft: var(--shadow-soft);
+
+  --font-sans: var(--font-inter);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  @apply font-sans;
+}
+
+@keyframes scrollUp {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(-50%);
+  }
+}
